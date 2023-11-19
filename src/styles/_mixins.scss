@@ -1,0 +1,50 @@
+@use "../styles/variables";
+
+@mixin mobile {
+  @media screen and (max-width: 850px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 850px) and (max-width: 1240px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1240px) {
+    @content;
+  }
+}
+
+@mixin buttonPrimary {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background-color: variables.$accent;
+  border: 2px solid variables.$accent;
+  color: variables.$white;
+}
+
+@mixin buttonSecondary {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 2px solid variables.$accent;
+  color: variables.$accent;
+}
+
+@mixin card {
+  width: 290px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: variables.$bg-secondary;
+  color: variables.$white;
+  @include tablet {
+    width: 300px;
+  }
+
+  @include desktop {
+    width: 350px;
+  }
+}
