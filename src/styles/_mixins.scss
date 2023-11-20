@@ -1,19 +1,19 @@
 @use "../styles/variables";
 
 @mixin mobile {
-  @media screen and (max-width: 850px) {
+  @media screen and (min-width: 425px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: 850px) and (max-width: 1240px) {
+  @media screen and (min-width: 850px) and (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1240px) {
+  @media screen and (min-width: 1024px) {
     @content;
   }
 }
